@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PageMeta } from '../components/PageMeta.jsx'
+import { GuideArt } from '../components/Illustrations.jsx'
 
 const GLOSSARY = [
   ['Artificial Intelligence (AI)', 'Software that can do tasks which normally need human thinking — recognising faces, answering questions, spotting patterns. (Hindi: कृत्रिम बुद्धिमत्ता · Punjabi: ਬਣਾਵਟੀ ਬੁੱਧੀ)'],
@@ -36,10 +37,15 @@ export default function HowToAI() {
 
       {/* 1. Hero */}
       <header className="page-hero">
-        <div className="wrap">
-          <span className="kicker">How to AI</span>
-          <h1>A straight-talking guide for students, parents, teachers and principals</h1>
-          <p>No jargon, no hype, in the language of Punjab. This is how we think about teaching AI — read it even if you never enrol with us.</p>
+        <div className="wrap page-hero-grid">
+          <div>
+            <span className="kicker">How to AI</span>
+            <h1>A straight-talking guide for students, parents, teachers and principals</h1>
+            <p>No jargon, no hype, in the language of Punjab. This is how we think about teaching AI — read it even if you never enrol with us.</p>
+          </div>
+          <div className="page-hero-art" aria-hidden="true">
+            <GuideArt />
+          </div>
         </div>
       </header>
 

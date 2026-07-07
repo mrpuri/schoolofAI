@@ -1,5 +1,6 @@
 import { PageMeta } from '../components/PageMeta.jsx'
 import LeadForm from '../components/LeadForm.jsx'
+import { UniversitiesArt } from '../components/Illustrations.jsx'
 
 export default function Universities() {
   return (
@@ -11,13 +12,18 @@ export default function Universities() {
 
       {/* 1. Hero */}
       <header className="page-hero">
-        <div className="wrap">
-          <span className="kicker">For Universities &amp; Colleges</span>
-          <h1>Your students chose you over Canada. Give them a reason to be glad they did.</h1>
-          <p>
-            Set up a Centre for Applied AI on your campus — industry-grade AI education, run by
-            India School Of AI, badged with your institution.
-          </p>
+        <div className="wrap page-hero-grid">
+          <div>
+            <span className="kicker">For Universities &amp; Colleges</span>
+            <h1>Your students chose you over Canada. Give them a reason to be glad they did.</h1>
+            <p>
+              Set up a Centre for Applied AI on your campus — industry-grade AI education, run by
+              India School Of AI, badged with your institution.
+            </p>
+          </div>
+          <div className="page-hero-art" aria-hidden="true">
+            <UniversitiesArt />
+          </div>
         </div>
       </header>
 

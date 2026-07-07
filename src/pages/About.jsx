@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PageMeta } from '../components/PageMeta.jsx'
 import Flywheel from '../components/Flywheel.jsx'
 import CtaBand from '../components/CtaBand.jsx'
+import { AboutArt } from '../components/Illustrations.jsx'
 
 export default function About() {
   return (
@@ -13,10 +14,15 @@ export default function About() {
 
       {/* 1. Hero */}
       <header className="page-hero">
-        <div className="wrap">
-          <span className="kicker">About Us</span>
-          <h1>We're building the operating system for AI-native education in India.</h1>
-          <p>Starting from Jalandhar, Punjab — where India's AI mandate lands first.</p>
+        <div className="wrap page-hero-grid">
+          <div>
+            <span className="kicker">About Us</span>
+            <h1>We're building the operating system for AI-native education in India.</h1>
+            <p>Starting from Jalandhar, Punjab — where India's AI mandate lands first.</p>
+          </div>
+          <div className="page-hero-art" aria-hidden="true">
+            <AboutArt />
+          </div>
         </div>
       </header>
 

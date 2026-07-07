@@ -1,5 +1,6 @@
 import { PageMeta } from '../components/PageMeta.jsx'
 import LeadForm from '../components/LeadForm.jsx'
+import { ContactArt } from '../components/Illustrations.jsx'
 
 export default function Contact() {
   return (
@@ -11,13 +12,18 @@ export default function Contact() {
 
       {/* 1. Hero */}
       <header className="page-hero">
-        <div className="wrap">
-          <span className="kicker">Contact Us</span>
-          <h1>Let's talk.</h1>
-          <p>
-            Partnership proposals · campus visits · admissions · teacher training · investment —
-            one form, and the right person replies.
-          </p>
+        <div className="wrap page-hero-grid">
+          <div>
+            <span className="kicker">Contact Us</span>
+            <h1>Let's talk.</h1>
+            <p>
+              Partnership proposals · campus visits · admissions · teacher training · investment —
+              one form, and the right person replies.
+            </p>
+          </div>
+          <div className="page-hero-art" aria-hidden="true">
+            <ContactArt />
+          </div>
         </div>
       </header>
 

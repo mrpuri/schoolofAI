@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PageMeta } from '../components/PageMeta.jsx'
 import LeadForm from '../components/LeadForm.jsx'
+import { SchoolsArt } from '../components/Illustrations.jsx'
 
 export default function Schools() {
   return (
@@ -12,14 +13,19 @@ export default function Schools() {
 
       {/* 1. Hero */}
       <header className="page-hero">
-        <div className="wrap">
-          <span className="kicker">For Schools</span>
-          <h1>AI is now compulsory. Teaching it well is optional — unless you partner with us.</h1>
-          <p>
-            CBSE has made AI &amp; Computational Thinking compulsory from Class 3 starting 2026-27.
-            Punjab has put AI in every government school. Most schools have no trained teachers, no
-            lab, and no depth behind the checkbox. We fix all three.
-          </p>
+        <div className="wrap page-hero-grid">
+          <div>
+            <span className="kicker">For Schools</span>
+            <h1>AI is now compulsory. Teaching it well is optional — unless you partner with us.</h1>
+            <p>
+              CBSE has made AI &amp; Computational Thinking compulsory from Class 3 starting 2026-27.
+              Punjab has put AI in every government school. Most schools have no trained teachers, no
+              lab, and no depth behind the checkbox. We fix all three.
+            </p>
+          </div>
+          <div className="page-hero-art" aria-hidden="true">
+            <SchoolsArt />
+          </div>
         </div>
       </header>
 

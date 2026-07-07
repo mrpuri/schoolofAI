@@ -1,24 +1,47 @@
-import { NavLink, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+
+const LINKS = [
+  ['/', 'Home'],
+  ['/schools', 'For Schools'],
+  ['/universities', 'For Universities'],
+  ['/how-to-ai', 'How to AI'],
+  ['/about', 'About Us'],
+  ['/contact', 'Contact Us'],
+]
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false)
   return (
     <nav>
       <div className="wrap nav-in">
-        <NavLink className="logo" to="/">
+        <NavLink className="logo" to="/" onClick={() => setOpen(false)}>
           <span className="logo-mark">AI</span> India School Of AI
         </NavLink>
         <div className="nav-links">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/schools">For Schools</NavLink>
-          <NavLink to="/universities">For Universities</NavLink>
-          <NavLink to="/how-to-ai">How to AI</NavLink>
-          <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-          <Link to="/#programs" className="nav-sub">Student Programs</Link>
-          <NavLink to="/contact" className="nav-cta">
-            Partner With Us
-          </NavLink>
+          {LINKS.map(([to, label]) => (
+            <NavLink key={to} to={to} end={to === '/'}>
+              {label}
+            </NavLink>
+          ))}
         </div>
+        <button
+          className="nav-burger"
+          aria-label="Menu"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div className={`nav-mobile${open ? ' open' : ''}`}>
+        {LINKS.map(([to, label]) => (
+          <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}>
+            {label}
+          </NavLink>
+        ))}
       </div>
     </nav>
   )
