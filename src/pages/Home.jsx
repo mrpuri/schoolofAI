@@ -1,42 +1,52 @@
 import { Link } from 'react-router-dom'
+import { PageMeta } from '../components/PageMeta.jsx'
+import Flywheel from '../components/Flywheel.jsx'
+import CtaBand from '../components/CtaBand.jsx'
 
 export default function Home() {
   return (
     <>
+      <PageMeta
+        title="India School Of AI — The Operating System for AI-Native Education"
+        description="India School Of AI is Punjab's first AI-native campus in Jalandhar — where students learn with AI tutors, not just about AI — and the partner that brings the same infrastructure to schools and colleges."
+      />
+
+      {/* 1. Hero */}
       <header className="hero" id="top">
         <div className="wrap hero-grid">
           <div>
             <span className="badge">
-              <span className="dot"></span> Admissions open · Jalandhar, Punjab
+              <span className="dot"></span> India School Of AI · the operating system for AI-native education
             </span>
             <h1>
-              Build your future in AI — <em>right here in Jalandhar</em>
+              The classroom of 2030. <em>Open in Jalandhar today.</em>
             </h1>
             <p>
-              India School Of AI is Punjab's practical, project-first AI institute. Career-track
-              programs for graduates and job seekers, and weekend AI &amp; coding programs for
-              school students. Learn in English, Hindi or Punjabi.
+              India School Of AI is Punjab's first AI-native campus — where students learn{' '}
+              <i>with</i> AI tutors, not just <i>about</i> AI — and the partner that brings the
+              same infrastructure to your school or college. We don't just teach AI. Our
+              classrooms run on it.
             </p>
             <div className="hero-ctas">
               <Link to="/contact" className="btn btn-primary">
-                Get Early Bird Discount
+                Partner With Us
               </Link>
               <a href="#programs" className="btn btn-ghost">
-                Explore Programs
+                Explore Student Programs
               </a>
             </div>
             <div className="hero-stats">
               <div className="hstat">
-                <b>2</b>
-                <span>Flagship programs</span>
-              </div>
-              <div className="hstat">
-                <b>100%</b>
-                <span>Hands-on, project-based</span>
+                <b>1st</b>
+                <span>AI-native campus in Punjab</span>
               </div>
               <div className="hstat">
                 <b>3</b>
                 <span>Languages of instruction</span>
+              </div>
+              <div className="hstat">
+                <b>100%</b>
+                <span>Hands-on, project-based</span>
               </div>
             </div>
           </div>
@@ -86,30 +96,116 @@ export default function Home() {
         </div>
       </header>
 
+      {/* 2. The moment (stat strip) */}
       <div className="strip">
-        <div className="wrap strip-grid">
-          <div>
-            <b>32%</b>
-            <span>projected growth in AI hiring in India (2026)*</span>
+        <div className="wrap">
+          <div className="strip-grid">
+            <div>
+              <b>2026-27</b>
+              <span>AI compulsory in CBSE Classes 3–8</span>
+            </div>
+            <div>
+              <b>Next month</b>
+              <span>AI in every Punjab govt school</span>
+            </div>
+            <div>
+              <b>10M</b>
+              <span>teachers need AI training</span>
+            </div>
+            <div>
+              <b>50,000</b>
+              <span>new tinkering labs funded by GoI</span>
+            </div>
           </div>
-          <div>
-            <b>~3.8 lakh</b>
-            <span>AI job openings expected in India in 2026*</span>
-          </div>
-          <div>
-            <b>1 in 5</b>
-            <span>AI learners now come from tier-2 cities*</span>
-          </div>
-          <div>
-            <b>2026</b>
-            <span>AI made core curriculum in Punjab schools</span>
-          </div>
+          <p style={{ textAlign: 'center', color: '#a9b6d8', fontSize: 14.5, marginTop: 22 }}>
+            The mandate has arrived. The infrastructure hasn't. That's what we build.
+          </p>
         </div>
       </div>
 
+      {/* 3. Three doors */}
+      <section id="audiences">
+        <div className="wrap">
+          <span className="kicker">Who are you here for?</span>
+          <h2>Three doors. Pick yours.</h2>
+          <div className="doors">
+            <div className="door saffron">
+              <h3>For Schools</h3>
+              <p>
+                AI Campus-in-a-Box — lab, curriculum, and teachers, run on our platform. Meet the
+                2026-27 mandate properly, not on paper.
+              </p>
+              <Link to="/schools" className="btn btn-blue">
+                Explore School Partnerships
+              </Link>
+            </div>
+            <div className="door">
+              <h3>For Universities</h3>
+              <p>
+                A Centre for Applied AI on your campus — industry-grade AI education badged with
+                your institution.
+              </p>
+              <Link to="/universities" className="btn btn-blue">
+                Explore University Partnerships
+              </Link>
+            </div>
+            <div className="door green">
+              <h3>For Students &amp; Parents</h3>
+              <p>
+                Learn at the flagship — the 6-month AI Career Program for graduates and Young AI
+                Innovators weekend batches for school students.
+              </p>
+              <a href="#programs" className="btn btn-blue">
+                See Student Programs
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. The Flagship */}
+      <section className="curr" id="flagship">
+        <div className="wrap split">
+          <div>
+            <span className="kicker" style={{ color: '#ffd9a3' }}>The Flagship</span>
+            <h2>What "AI-native" actually means</h2>
+            <p className="sub" style={{ marginBottom: 18 }}>
+              Our Jalandhar campus is not a computer institute with a new signboard. It is a
+              working model of the classroom of 2030:
+            </p>
+            <ul className="feat" style={{ color: '#e6ebf8' }}>
+              <li>Adaptive AI-tutor learning paced to each student, with human coaches on the floor</li>
+              <li>Project studios — every module ends with something you built, not a certificate</li>
+              <li>Portfolio outcomes: working models, apps and dashboards you can show</li>
+              <li>Instruction in English, Hindi and Punjabi</li>
+            </ul>
+            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 8 }}>
+              Book a Campus Visit
+            </Link>
+          </div>
+          <div aria-hidden="true">
+            <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-native classroom illustration">
+              <rect x="0" y="0" width="480" height="340" rx="20" fill="rgba(255,255,255,.05)" />
+              <rect x="60" y="70" width="360" height="180" rx="10" fill="#101d45" />
+              <rect x="80" y="90" width="150" height="14" rx="7" fill="#2456e6" />
+              <rect x="80" y="116" width="220" height="10" rx="5" fill="#39508f" />
+              <rect x="80" y="136" width="180" height="10" rx="5" fill="#39508f" />
+              <rect x="80" y="166" width="90" height="60" rx="8" fill="#ff9933" />
+              <rect x="185" y="166" width="90" height="60" rx="8" fill="#5b83f0" />
+              <rect x="290" y="166" width="90" height="60" rx="8" fill="#18a05e" />
+              <rect x="210" y="250" width="60" height="16" fill="#8fa3d6" />
+              <rect x="150" y="266" width="180" height="12" rx="6" fill="#8fa3d6" />
+              <circle cx="410" cy="60" r="26" fill="#ff9933" />
+              <text x="399" y="67" fontFamily="Arial" fontSize="18" fontWeight="bold" fill="#fff">AI</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Student programs */}
       <section id="programs">
         <div className="wrap">
-          <span className="kicker">Our Programs</span>
+          <span className="kicker">Student Programs · Flagship Campus</span>
           <h2>Two tracks. One mission: real AI skills.</h2>
           <p className="sub">
             No shortcuts, no certificate-mill promises. Small batches, live projects, and mentors
@@ -225,53 +321,82 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <span className="kicker">Why India School Of AI</span>
-          <h2>Built different from certificate shops</h2>
-          <div className="pillars">
-            <div className="pillar">
-              <div className="ico" style={{ background: '#e3ebff' }}>
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2456e6" strokeWidth="2">
-                  <path d="M4 19h16M6 16l4-6 3 3 5-8" />
-                </svg>
-              </div>
-              <h3>Outcome-first, honestly</h3>
-              <p>
-                We prepare you for real hiring — local IT roles, remote AI work, and metro
-                placements. No fake "100% placement" promises; a transparent placement report every
-                cohort instead.
-              </p>
-            </div>
-            <div className="pillar">
-              <div className="ico" style={{ background: '#fff1de' }}>
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e07f1a" strokeWidth="2">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" />
-                </svg>
-              </div>
-              <h3>Mentors who build</h3>
-              <p>
-                Learn from practitioners and visiting industry mentors — not slide-readers. Small
-                batches mean your doubts get answered the same day, in English, Hindi or Punjabi.
-              </p>
-            </div>
-            <div className="pillar">
-              <div className="ico" style={{ background: '#dff5ea' }}>
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#18a05e" strokeWidth="2">
-                  <rect x="3" y="4" width="18" height="14" rx="2" />
-                  <path d="M8 21h8M12 18v3" />
-                </svg>
-              </div>
-              <h3>Learn by shipping</h3>
-              <p>
-                Every module ends with a project you can show — a working model, an app, a
-                dashboard. Your portfolio, not just a certificate, is what gets you hired.
-              </p>
-            </div>
-          </div>
+      {/* Student FAQ (compact) */}
+      <section id="faq" style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ maxWidth: 820 }}>
+          <span className="kicker">Student FAQ</span>
+          <h2 style={{ marginBottom: 28 }}>Common questions</h2>
+          <details>
+            <summary>I have no coding background. Can I join the AI Career Program?</summary>
+            <p>
+              Yes. The program starts from absolute basics — Module 1 assumes zero programming
+              knowledge. What matters is 10–12 hours of committed effort per week.
+            </p>
+          </details>
+          <details>
+            <summary>Do you guarantee placement?</summary>
+            <p>
+              No one can honestly guarantee a job, and we won't pretend to. What we do provide:
+              portfolio-grade projects, structured interview preparation, and active placement
+              assistance through local, remote and metro hiring pipelines — with a transparent
+              placement report published for every cohort.
+            </p>
+          </details>
+          <details>
+            <summary>I was planning to go abroad but plans changed. Is this for me?</summary>
+            <p>
+              Many of our applicants are in exactly this position. The AI Career Program is
+              designed as a serious domestic alternative — building skills that are in demand
+              across India and globally, at a fraction of a study-abroad budget.
+            </p>
+          </details>
+          <details>
+            <summary>What's the batch size and language of teaching?</summary>
+            <p>
+              Maximum 20 students per batch. Instruction is in a natural mix of English, Hindi and
+              Punjabi — concepts explained the way you understand best, with materials in English.
+            </p>
+          </details>
+          <details>
+            <summary>How does the early bird discount work?</summary>
+            <p>
+              The first 40 enrolments across our founding batches get the discounted fee, locked in
+              for their full program. Submit the form or call us to reserve — a reservation holds
+              your discount for 7 days.
+            </p>
+          </details>
+          <details>
+            <summary>Where is the campus?</summary>
+            <p>
+              Our campus is in central Jalandhar (address announced to registered applicants;
+              campus visits available during counselling). Weekday and weekend batches are offered.
+            </p>
+          </details>
         </div>
       </section>
+
+      {/* 6. How the model works */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <span className="kicker">How the model works</span>
+          <h2>One campus becomes a network</h2>
+          <p className="sub">
+            The flagship proves it. Schools and colleges license it. The Teacher Academy certifies
+            and sustains it.
+          </p>
+          <Flywheel />
+        </div>
+      </section>
+
+      {/* 7. CTA band */}
+      <CtaBand
+        title="See it before you believe it."
+        sub="Visit the flagship in Jalandhar, or invite us to your campus."
+        buttons={[
+          { label: 'Partner With Us', to: '/contact' },
+          { label: 'Book a Campus Visit', to: '/contact', variant: 'btn-ghost' },
+        ]}
+      />
     </>
   )
 }

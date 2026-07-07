@@ -1,90 +1,98 @@
-import { useState } from 'react'
+import { PageMeta } from '../components/PageMeta.jsx'
+import LeadForm from '../components/LeadForm.jsx'
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
-
   return (
     <>
+      <PageMeta
+        title="Contact Us | India School Of AI — Jalandhar"
+        description="Talk to India School Of AI — partnership proposals, campus visits, admissions, teacher training, or investment. Flagship campus in Jalandhar, Punjab."
+      />
+
+      {/* 1. Hero */}
       <header className="page-hero">
         <div className="wrap">
-          <span className="kicker">Get In Touch</span>
-          <h1>Reserve your early bird seat</h1>
+          <span className="kicker">Contact Us</span>
+          <h1>Let's talk.</h1>
           <p>
-            Fill in the form below or reach out directly — our counsellor will get back to you
-            within 24 hours.
+            Partnership proposals · campus visits · admissions · teacher training · investment —
+            one form, and the right person replies.
           </p>
         </div>
       </header>
 
-      <section className="enroll" id="enroll">
+      {/* 2. Lead form */}
+      <section className="enroll" id="form">
         <div className="wrap split">
           <div>
-            <span className="kicker" style={{ color: '#ffd9a3' }}>Registrations Open</span>
-            <h2>Founding batches. Early bird pricing.</h2>
+            <span className="kicker" style={{ color: '#ffd9a3' }}>Write To Us</span>
+            <h2>You'll hear back within 24 hours</h2>
             <p style={{ color: '#b9c4e2', fontSize: 17, marginBottom: 24 }}>
-              Be part of our first cohorts in Jalandhar and lock in the lowest fees we will ever
-              offer. Early bird discount applies to the first 40 enrolments across programs. Free
-              counselling session and campus visit for every applicant — no obligation.
+              Whether you run a school, lead a college, teach, invest, or are choosing a program
+              for yourself or your child — tell us who you are and what you need.
             </p>
             <ul className="feat" style={{ color: '#e6ebf8' }}>
-              <li>AI Career Program: <b>₹49,999</b> (regular ₹65,000)</li>
-              <li>Young AI Innovators: <b>₹2,499/month</b> (regular ₹3,499)</li>
-              <li>Free trial class for school students</li>
-              <li>Flexible EMI options available</li>
+              <li>School &amp; university partnership proposals</li>
+              <li>Student admissions &amp; free trial classes</li>
+              <li>Teacher Academy certification enquiries</li>
+              <li>Investor &amp; institutional conversations</li>
             </ul>
-            <p style={{ color: '#8fa0c9', fontSize: 14.5, marginTop: 18 }}>
-              Prefer to talk? Call/WhatsApp us at{' '}
-              <b style={{ color: '#fff' }}>+91-XXXXX-XXXXX</b> or email{' '}
-              <b style={{ color: '#fff' }}>hello@indiaschoolofai.in</b>
-            </p>
           </div>
-          <div className="form-card">
-            <h3>Reserve your early bird seat</h3>
-            <p className="fnote">Fill this in and our counsellor will reach out within 24 hours.</p>
-            <form onSubmit={handleSubmit}>
-              <div className="fgrid">
-                <div>
-                  <label htmlFor="f-name">Full name *</label>
-                  <input id="f-name" required placeholder="Your name" />
-                </div>
-                <div>
-                  <label htmlFor="f-phone">Phone / WhatsApp *</label>
-                  <input id="f-phone" required type="tel" placeholder="+91" />
-                </div>
-                <div className="full">
-                  <label htmlFor="f-email">Email</label>
-                  <input id="f-email" type="email" placeholder="you@example.com" />
-                </div>
-                <div className="full">
-                  <label htmlFor="f-prog">I'm interested in *</label>
-                  <select id="f-prog" required defaultValue="">
-                    <option value="" disabled>Select a program…</option>
-                    <option>AI Career Program (6 months)</option>
-                    <option>Young AI Innovators — Grades 5–8</option>
-                    <option>Young AI Innovators — Grades 9–12</option>
-                    <option>School Partnership / AI Lab</option>
-                  </select>
-                </div>
-                <div className="full">
-                  <label htmlFor="f-msg">Anything you'd like to ask?</label>
-                  <textarea id="f-msg" rows="3" placeholder="Optional"></textarea>
-                </div>
+          <LeadForm
+            title="Send us a message"
+            note="Fill this in and you'll hear from us within 24 hours."
+            submitLabel="Send Message"
+          />
+        </div>
+      </section>
+
+      {/* 3. Direct contact */}
+      <section id="direct">
+        <div className="wrap">
+          <span className="kicker">Reach Us Directly</span>
+          <h2>Prefer email or a call?</h2>
+          <div className="contact-blocks">
+            <div className="cblock">
+              <div className="ico" style={{ background: '#e3ebff' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2456e6" strokeWidth="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 7 10 6 10-6" />
+                </svg>
               </div>
-              <button className="btn btn-primary" style={{ width: '100%', marginTop: 18 }} type="submit" disabled={submitted}>
-                Claim Early Bird Discount
-              </button>
-              {submitted && (
-                <div className="form-msg">
-                  ✅ Thank you! Your early bird request is noted. Our counsellor will contact you
-                  within 24 hours.
-                </div>
-              )}
-            </form>
+              <h3>Email</h3>
+              <a href="mailto:founder@amplificable.com">founder@amplificable.com</a>
+            </div>
+            <div className="cblock">
+              <div className="ico" style={{ background: '#dff5ea' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#18a05e" strokeWidth="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <h3>Phone / WhatsApp</h3>
+              <a href="tel:+91XXXXXXXXXX">+91-XXXXX-XXXXX</a>
+            </div>
+            <div className="cblock">
+              <div className="ico" style={{ background: '#fff1de' }}>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e07f1a" strokeWidth="2">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <h3>Campus</h3>
+              <p>Jalandhar, Punjab</p>
+              <p style={{ fontSize: 13.5 }}>Campus address shared with confirmed visitors</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Campus visit CTA */}
+      <section className="cta-band">
+        <div className="wrap">
+          <h2>The best pitch is a walk through the flagship.</h2>
+          <p>Book a visit — see the AI-native classroom running before you decide anything.</p>
+          <div className="btns">
+            <a href="#form" className="btn btn-primary">Book a Visit</a>
           </div>
         </div>
       </section>

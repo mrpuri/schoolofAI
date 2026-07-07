@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
-import Jalandhar from './pages/Jalandhar.jsx'
+import Schools from './pages/Schools.jsx'
+import Universities from './pages/Universities.jsx'
+import HowToAI from './pages/HowToAI.jsx'
+import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 
 export default function App() {
@@ -9,7 +12,10 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/jalandhar" element={<Jalandhar />} />
+        <Route path="/schools" element={<Schools />} />
+        <Route path="/universities" element={<Universities />} />
+        <Route path="/how-to-ai" element={<HowToAI />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
